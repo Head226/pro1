@@ -1,25 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>我的宠物狗 - 小可爱主页</title>
   <style>
     body {
-      font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      font-family: "Segoe UI", sans-serif;
       margin: 0;
-      background-color: #f0f0f0;
+      background-color: #fefefe;
+      color: #333;
     }
-    h1 {
-      color: #007acc;
+    header {
+      background-color: #ffcc00;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .banner {
+      width: 100%;
+      height: 300px;
+      background-image: url('your-banner-image.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .intro {
+      padding: 40px;
+      text-align: center;
+    }
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <h1>Hello, World!</h1>
+
+  <header>
+    <h1>小球球的主页 🐾</h1>
+  </header>
+
+  <div class="banner"></div>
+
+  <section class="intro">
+    <h2>我是小球球</h2>
+    <p>我是一只超级可爱的小柯基，喜欢吃肉、跑步和晒太阳！</p>
+    <p>这是我成长的照片，希望你喜欢！</p>
+  </section>
+
+  <section class="gallery">
+    <img src="dog1.jpg" alt="狗狗照片1">
+    <img src="dog2.jpg" alt="狗狗照片2">
+    <img src="dog3.jpg" alt="狗狗照片3">
+    <img src="dog4.jpg" alt="狗狗照片4">
+  </section>
+
+  <footer>
+    版权所有 © 2025 小球球的主人 ｜ 联系方式：xxx@example.com
+  </footer>
+
 </body>
 </html>
