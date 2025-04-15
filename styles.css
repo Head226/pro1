@@ -31,11 +31,19 @@ header p {
 }
 
 /* 图片（如hero图）样式 */
-.hero-image img {
-    width: 100%; /* 图片宽度设置为100%，即适应容器宽度 */
-    height: auto; /* 高度自适应，保持图片比例 */
-    display: block; /* 使图片以块级元素显示，避免下方出现空隙 */
+.hero-image {
+    display: flex;            /* 使用 Flexbox 布局 */
+    justify-content: center;  /* 水平居中 */
+    align-items: center;      /* 垂直居中 */
+    height: 100vh;            /* 使容器占满整个视口高度 */
 }
+
+.hero-image img {
+    max-width: 100%;          /* 图片最大宽度为100% */
+    height: auto;             /* 高度自适应，保持图片比例 */
+    display: block;           /* 使图片以块级元素显示，避免下方出现空隙 */
+}
+
 
 /* 相册介绍部分的样式 */
 .gallery-intro {
@@ -59,22 +67,48 @@ header p {
     background-color: #ff4500;			/*背景色变为ff4500*/
 }
 
-.gallery .photo-grid {
+.photo-grid {
     display: grid;			/*网格布局*/
-    grid-template-columns: repeat(3, 1fr);			/*布局3列，每列宽度1fr*/
-    gap: 10px;				/*网格间距*/
+    grid-template-columns: repeat(5, 1fr);			/*布局3列，每列宽度1fr*/
+    gap: 30px;				/*网格间距*/
     padding: 20px;			/*页边距*/
 }
 
-.gallery .photo-grid a {
-    display: block;
+.photo-grid a {
+    display: flex;
+    flex-direction: column; /* 垂直排列图片和文字 */
+    align-items: center; /* 水平居中对齐 */
+    text-decoration: none; /* 去掉默认的下划线 */
 }
 
-.gallery .photo-grid img {			/*修改图片显示情况*/
+/* 每个文字描述的样式 */
+.photo-grid p {
+    text-align: center; /* 文字居中 */
+    margin-top: 5px;
+    color: black; /* 黑色文字 */
+    font-size: 18px; /* 文字大小 */
+}
+
+.photo-grid img {			/*修改图片显示情况*/
     width: 300px;			/*宽度*/
     height: auto;			/*高度自动，保持纵横比*/
     border-radius: 8px;			/*图片圆角*/
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);			/*图片阴影效果*/
+}
+
+.date-group {
+    margin-bottom: 40px;
+}
+
+.date-group h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.date-group h3 {
+    text-align: center;
+    margin: 15px 0;
 }
 
 /* 样式 .back-btn 用于设置按钮的样式 */
@@ -98,6 +132,7 @@ header p {
 .back-btn-section {
     text-align: center; /* 使按钮居中 */
 }
+
 
 footer {
     background-color: #ffebcd;
