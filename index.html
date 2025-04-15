@@ -1,91 +1,37 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>太君的主页</title>
-  <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      margin: 0;
-      background-color: #fefefe;
-      color: #333;
-    }
-    header {
-      background-color: #ffcc00;
-      text-align: center;
-      padding: 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    .banner {
-      width: 100%;
-      height: 300px;
-      background-image: url('your-banner-image.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-    .intro {
-      padding: 40px;
-      text-align: center;
-    }
-    .intro h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      padding: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    footer {
-      background-color: #eee;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
+<!DOCTYPE html>			<!--文档通过html5渲染-->
+<html lang="zh-CN">			<!--页面语言为简体中文-->
+<head>			<!--包括页面元数据，不在页面显示-->
+  <meta charset="UTF-8" />			<!--文档字符编码为UTF-8，支持多种语言的字符-->
+  <!---->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>			<!--设置视口，保证页面在不同设备适配-->
+  <!--<meta />：自闭合标签。name="viewport"：视口属性。width=device-width：自适应屏幕宽度。initial-scale：初始缩放比例。maximum-scale=1.0：最大缩放比例1.0-->
+  <title>太君：大圣</title>			<!--<title> </title>：标题栏，在最上边缩略栏显示-->
+    <link rel="stylesheet" href="styles.css">			<!--链接外部文件-->
+	<!--rel="stylesheet"：文件为CSS文件，定义网页样式、颜色、布局等。href：指定要链接的文件地址。"styles.css"路径包含网页的样式定义-->
+</head>			<!--结束head部分-->
+<body>			<!--网页主体信息，显示在页面-->
+    <header>			<!--定义页面头部区域，包括标题、导航菜单等-->
+        <div class="container">			<!--<div> </dev>为容器，class：为div容器指定样式，样式在styles.css文件中-->
+            <h1>欢迎来到大圣的主页！</h1>			<!--<h1> </h1>：标题标签，html中六个标题标签h1到h6，h1级别最高-->
+            <p>这里是太君的私人空间！</p>			<!--<p> </p>：段落标签-->
+        </div>
+    </header>
+    
+    <section class="hero-image">			<!--section：正文中的某部分，class：指定section的样式-->
+        <img src="main.jpg" alt="大圣" />			<!--<img />：图像标签（自闭合）。-->
+		<!--src：属性。指定图像路径或URL。alt：图像描述性文本，浏览器无法加载图象时，用文本替代-->
+    </section>
 
-  <header>
-    <h1>太君的主页 🐾</h1>
-  </header>
+    <section class="gallery-intro">
+        <div class="container">
+            <h2>我的相册</h2>
+            <p>点击下方按钮查看更多照片！</p>
+            <a href="./photos/photos.html" class="btn">进入相册</a>			<!--<a> </a>：超链接标签。-->
+        </div>
+    </section>
 
-  <div class="banner"></div>
-
-  <section class="intro">
-    <p>我是一只超级可爱的小日本鬼子！</p>
-    <p>这是我成长的照片！</p>
-  </section>
-
-  <section class="gallery">
-
-    <img src="./2025-0410/333.webp" alt="test1">
-    <a href="www,baidu.com">手性磁体与超导体异质结中的斯格明子-超导磁通对</a><hr align="left" width="90%"/>
-    <img src="1.jpg" alt="狗狗照片1">
-    <img src="2.jpg" alt="狗狗照片2">
-    <img src="3.jpg" alt="狗狗照片3">
-    <img src="4.jpg" alt="狗狗照片4">
-    <img src="5.jpg" alt="狗狗照片5">
-    <img src="6.jpg" alt="狗狗照片6">
-    <img src="7.jpg" alt="狗狗照片7">
-    <img src="8.jpg" alt="狗狗照片8">
-    <img src="9.jpg" alt="狗狗照片9">
-  </section>
-
-  <footer>
-    版权所有 © 2025  ｜ 联系方式：xxx@example.com
-  </footer>
-
+    <footer>			<!--<footer> </footer>：定义页脚部分-->
+        <p>&copy; 2025 大圣 版权所有</p>
+    </footer>
 </body>
 </html>

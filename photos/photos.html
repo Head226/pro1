@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大圣的相册</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./lightbox.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>我的相册</h1>
+            <p>欢迎欣赏大圣的可爱瞬间！点击照片查看大图。</p>
+        </div>
+    </header>
+
+    <section class="gallery">
+        <div class="container">
+            <div class="photo-grid">
+                <a href="1.jpg" data-lightbox="pet-gallery">			<!--href：文件路径。data-lightbox：自定义属性，与插件lightbox配合-->
+				<!--"pet-gallery"：所有名称为"pet-gallery"的属于同一组，以滑动方式打开-->
+                    <img src="1.jpg" alt="大圣1">
+                </a>
+				<a href="2.jpg" data-lightbox="pet-gallery">			<!--href：点击时显示图片路径。src：页面缩略图显示图片路径-->
+                    <img src="2.jpg" alt="大圣2">
+                </a>
+                <a href="3.jpg" data-lightbox="pet-gallery">
+                    <img src="3.jpg" alt="大圣3">
+                </a>
+				<a href="4.jpg" data-lightbox="pet-gallery">
+                    <img src="4.jpg" alt="大圣4">
+                </a>
+                <a>
+					<img src="5.jpg" alt="大圣5">
+					<img src="6.jpg" alt="大圣6">
+					<img src="7.jpg" alt="大圣7">
+					<img src="8.jpg" alt="大圣8">
+					<img src="9.jpg" alt="大圣9">
+                </a>
+                <!-- 添加更多照片 -->
+            </div>
+        </div>
+    </section>
+	
+	<section>
+		<a href="../index.html">返回</a>
+	</section>
+
+    <footer>
+        <p>&copy; 2025 大圣 版权所有</p>
+    </footer>
+
+    <script src="./lightbox.min.js"></script>			<!--<script> </script>引入JavaScript代码，-->
+</body>
+</html>
